@@ -72,7 +72,7 @@ function getBranches(el) {
 }
 
 function displayBranches() {
-  const commits = JSON.parse(this.responseText);
+  const branches = JSON.parse(this.responseText);
   const commitsList = `<ul>${branches
     .map(
       branche =>
@@ -86,3 +86,6 @@ function displayBranches() {
 
 
 
+const branchesList = `<ul>${branches
+    .map(branch => '<li>' + branch.name + '</li>')
+    .join('')}</ul>`;
