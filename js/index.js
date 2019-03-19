@@ -81,11 +81,5 @@ function displayBranches() {
         '</li></strong>'
     )
     .join('')}</ul>`;
-  document.getElementById('details').innerHTML = commitsList;
+  document.getElementById('details').innerHTML = branchesList;
 }
-
-
-
-const branchesList = `<ul>${branches
-    .map(branch => '<li>' + branch.name + '</li>')
-    .join('')}</ul>`;
