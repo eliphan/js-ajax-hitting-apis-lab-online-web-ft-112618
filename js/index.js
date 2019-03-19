@@ -71,3 +71,19 @@ function getBranches(el) {
   req.send();
 }
 
+function displayBranches() {
+  const commits = JSON.parse(this.responseText);
+  const commitsList = `<ul>${branches
+    .map(
+      commit =>
+        '<li><strong>' +
+        commit.commit.author.name +
+        '<li><strong>' +
+        commit.author.login +
+        '</strong> - ' +
+        commit.commit.message +
+        '</li>'
+    )
+    .join('')}</ul>`;
+  document.getElementById('details').innerHTML = commitsList;
+}
