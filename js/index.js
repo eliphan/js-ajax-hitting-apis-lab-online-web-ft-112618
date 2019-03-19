@@ -64,8 +64,9 @@ function getBranches(el) {
   const rootURL = 'https://api.github.com';
   const uri =
     rootURL + '/repos/' + el.dataset.username + '/' + repoName + '/commits';
+    
   const req = new XMLHttpRequest();
-  req.addEventListener('load', displayCommits);
+  req.addEventListener('load', displayBranches);
   req.open('GET', uri);
   req.send();
 }
