@@ -1,6 +1,6 @@
 // your code here
 function getCommits(el) {
-  const name = el.dataset.repo;
+  const name = el.dataset.repository;
   const rootURL = 'https://api.github.com';
   const uri =
     rootURL + '/repos/' + el.dataset.username + '/' + repoName + '/commits';
