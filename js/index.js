@@ -26,15 +26,6 @@ function displayCommits() {
   document.getElementById('commits').innerHTML = commitsList;
 }
 
-
-
-function getCommits(el) {
-  const repoName = el.dataset.repository;
-  const uri =
-    rootURL + '/repos/' + el.dataset.username + '/' + repoName + '/commits';
-    
-
-}
 function displayCommits() {
   const commits = JSON.parse(this.responseText);
   const commitsList = `<ul>${commits
