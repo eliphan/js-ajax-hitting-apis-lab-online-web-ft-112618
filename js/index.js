@@ -21,3 +21,6 @@ function displayCommits() {
     .join('')}</ul>`;
   document.getElementById('commits').innerHTML = commitsList;
 }
+
+
+
