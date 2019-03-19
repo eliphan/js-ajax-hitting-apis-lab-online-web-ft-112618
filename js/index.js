@@ -59,4 +59,13 @@ function displayCommits() {
   document.getElementById('details').innerHTML = commitsList;
 }
 
-
+function getBranches(el) {
+  const repoName = el.dataset.repository;
+  const rootURL = 'https://api.github.com';
+  const uri =
+    rootURL + '/repos/' + el.dataset.username + '/' + repoName + '/commits';
+  const req = new XMLHttpRequest();
+  req.addEventListener('load', displayCommits);
+  req.open('GET', uri);
+  req.send();
+}
