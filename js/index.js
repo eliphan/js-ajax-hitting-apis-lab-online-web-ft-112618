@@ -1,7 +1,8 @@
 // your code here
 function getCommits(el) {
   const name = el.dataset.repo;
-  
+  const uri =
+    rootURL + '/repos/' + el.dataset.username + '/' + repoName + '/commits';
   const req = new XMLHttpRequest();
   req.addEventListener('load', displayCommits);
   req.open('GET', uri);
