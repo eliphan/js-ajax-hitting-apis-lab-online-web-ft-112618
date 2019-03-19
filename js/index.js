@@ -75,9 +75,9 @@ function displayBranches() {
   const branches = JSON.parse(this.responseText);
   const branchesList = `<ul>${branches
     .map(
-      branche =>
+      branch =>
         '<li><strong>' +
-        branche.name
+        branche.name +
         '</li></strong>'
     )
     .join('')}</ul>`;
