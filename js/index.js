@@ -78,7 +78,7 @@ function displayBranches() {
       branche =>
         '<li><strong>' +
         branche.name
-        </li>
+        '</li></strong>'
     )
     .join('')}</ul>`;
   document.getElementById('details').innerHTML = commitsList;
